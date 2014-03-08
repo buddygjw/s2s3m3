@@ -16,9 +16,8 @@
     +- org.springframework:spring-tx:jar:3.0.5.RELEASE
     |  +- aopalliance:aopalliance:jar:1.0
     |  \- org.springframework:spring-aop:jar:3.0.5.RELEASE
-    \- com.h2database:h2:jar:1.3.175
-    \- junit:junit:jar:4.11
-    \- org.hamcrest:hamcrest-core:jar:1.3
+    +- org.springframework:spring-jdbc:jar:3.0.5.RELEASE
+    +- mysql:mysql-connector-java:jar:5.1.29
 
 2.增加数据库表，用于测试：
     CREATE TABLE fk_user (
