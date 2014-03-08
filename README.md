@@ -55,6 +55,7 @@
             <property name="dataSource" ref="dataSource" />
         </bean>
 
+
     7.2.增加Spring和MyBatis集成配置
     
         <!-- 配置SessionFactory和扫描实体类所在的包 -->
