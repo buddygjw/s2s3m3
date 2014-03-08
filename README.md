@@ -10,6 +10,7 @@
     
 
 1.加入依赖包，整个依赖树如下：
+===
 
     +- org.mybatis:mybatis:jar:3.2.5
     +- org.mybatis:mybatis-spring:jar:1.2.2
@@ -20,6 +21,7 @@
     +- mysql:mysql-connector-java:jar:5.1.29
 
 2.增加数据库表，用于测试：
+===
 
     CREATE TABLE fk_user (
       ID int(11) NOT NULL AUTO_INCREMENT,
@@ -40,9 +42,9 @@
   映射文件详见：org/fkjava/example/s2s3m3/db/dao/UserMapper.xml
 
 7.修改applicationContext.xml文件，增加数据源和MyBatis的集成配置
-
+===
     7.1.数据源和事务管理器
-    
+
         <bean id="dataSource"
               class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
             <property name="driverClass" value="com.mysql.jdbc.Driver"></property> 
@@ -57,7 +59,7 @@
 
 
     7.2.增加Spring和MyBatis集成配置
-    
+
         <!-- 配置SessionFactory和扫描实体类所在的包 -->
         <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
             <property name="dataSource" ref="dataSource" />
