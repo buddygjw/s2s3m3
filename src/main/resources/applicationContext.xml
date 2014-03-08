@@ -12,14 +12,14 @@
     <context:annotation-config />
     <!-- 使用注解事务支持 -->
     <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
-
+    <context:property-placeholder location="classpath:jdbc.properties"/>
     <!-- applicationContext.xml文件用于进行一些通用的初始化。 每个不同的组件、模块自身有一个配置文件负责自身的初始化。 -->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-        <property name="driverClass" value="com.mysql.jdbc.Driver"></property> 
-        <property name="url" value="jdbc:mysql://localhost:3306/wf"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="root@123456"></property>
+        <property name="driverClass" value="${jdbc.driver}"></property> 
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.user}"></property>
+        <property name="password" value="${jdbc.password}"></property>
     </bean>
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
